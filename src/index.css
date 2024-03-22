@@ -10,20 +10,53 @@
 }
 
 .App {
-  height: 100dvh;
+  height: 100vh;
   width: auto;
   background-image: url("./ocean-bg.png");
 }
 
 .container {
   height: 100%;
+  width: 100%;
   display: flex;
+  gap: 30px;
   justify-content: center;
+  flex-flow: column;
+  align-items: center;
 }
 
 .time {
   color: hsl(208, 100%, 97%, 0.9);
-  margin-top: 10%;
   font-size: 60px;
-  font-weight: 700;
+}
+
+.clock {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: solid 1px;
+  background-color: hsla(221, 75%, 50%, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.hand {
+  height: 1.5px;
+  left: 50%;
+  position: absolute;
+  background-color: violet;
+  border: solid 0.01px;
+  transform-origin: 0% 50%;
+  margin-left: 0.5px;
+}
+
+.hand.hour {
+  width: 50px;
+}
+.hand.minute {
+  width: 70px;
+}
+.hand.second {
+  width: 120px;
 }
